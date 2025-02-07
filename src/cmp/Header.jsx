@@ -38,7 +38,7 @@ const IOSSwitch = styled(Switch)(({ theme }) => ({
 const Header = ({ darkMode, setDarkMode, fontFamily, setFontFamily }) => {
   return (
     <header className="flex justify-between items-center mb-8">
-      <img src="https://i.ibb.co/YTdKsr2T/logo.png" alt="Logo" className="w-8 h-10 md:w-12 md:h-14" />
+      <a href="https://react-final-project-493fr.vercel.app/"> <img src="https://i.ibb.co/YTdKsr2T/logo.png" alt="Logo" className="w-8 h-10 md:w-12 md:h-14" /></a>
       <div className="flex items-center gap-4">
         <select 
           className={`p-2 rounded border ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}
