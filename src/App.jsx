@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Spinner from './components/Spinner';
-import Header from './components/Header';
-import SearchInput from './components/SearchInput';
-import DefinitionDisplay from './components/DefinitionDisplay';
+import Spinner from './cmp/Spinner';
+import Header from './cmp/Header';
+import SearchInput from './cmp/SearchInput';
+import DefinitionDisplay from './cmp/DefinitionDisplay';
 
 function App() {
   const [word, setWord] = useState('chess');
