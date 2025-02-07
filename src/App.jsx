@@ -73,6 +73,7 @@ function App() {
             <p className="text-gray-500 max-w-md">{error.message}</p>
           </div>
         )}
+        <br />
         {!loading && definition && !error && (<DefinitionDisplay definition={definition} darkMode={darkMode} handlePlayAudio={handlePlayAudio} isPlaying={isPlaying} /> )}
       </div>
     </div>
