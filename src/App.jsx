@@ -63,19 +63,8 @@ function App() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`} style={{ fontFamily }}>
       <div className="max-w-3xl mx-auto p-6 md:p-12">
-        <Header 
-          darkMode={darkMode} 
-          setDarkMode={setDarkMode} 
-          fontFamily={fontFamily} 
-          setFontFamily={setFontFamily} 
-        />
-        <SearchInput 
-          word={word} 
-          setWord={setWord} 
-          fetchDefinition={fetchDefinition} 
-          darkMode={darkMode} 
-          inputError={inputError} 
-        />
+        <Header darkMode={darkMode} setDarkMode={setDarkMode}  fontFamily={fontFamily} setFontFamily={setFontFamily} />
+        <SearchInput word={word} setWord={setWord} fetchDefinition={fetchDefinition} darkMode={darkMode} inputError={inputError} />
         {loading && <Spinner />}
         {!loading && error && (
           <div className="flex flex-col items-center justify-center text-center min-h-[50vh]">
@@ -84,14 +73,7 @@ function App() {
             <p className="text-gray-500 max-w-md">{error.message}</p>
           </div>
         )}
-        {!loading && definition && !error && (
-          <DefinitionDisplay 
-            definition={definition} 
-            darkMode={darkMode} 
-            handlePlayAudio={handlePlayAudio} 
-            isPlaying={isPlaying} 
-          />
-        )}
+        {!loading && definition && !error && (<DefinitionDisplay definition={definition} darkMode={darkMode} handlePlayAudio={handlePlayAudio} isPlaying={isPlaying} /> )}
       </div>
     </div>
   );
